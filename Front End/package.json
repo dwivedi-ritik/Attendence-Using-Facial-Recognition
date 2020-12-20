@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "Gui-Interface",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": ".",
   "keywords": [
     "Electron",
     "quick",
@@ -20,7 +20,6 @@
     "electron": "^11.0.4"
   },
   "dependencies": {
-    "axios": "^0.21.0",
     "python-shell":"^2.0.3"
   }
 }
