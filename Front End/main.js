@@ -14,7 +14,7 @@ function createWindow () {
       enableRemoteModule:true
     }
   })
-  mainWindow.loadFile('./Front End/index.html')
+  mainWindow.loadFile('./Web el/index.html')
   // mainWindow.webContents.openDevTools();
 }
 
