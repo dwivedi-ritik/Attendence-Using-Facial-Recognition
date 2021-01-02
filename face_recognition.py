@@ -102,7 +102,7 @@ cv2.destroyAllWindows()
 #Creating Data frame and putting into csv
 
 
-df = pd.read_csv("./Attendence lists/student_list.csv")
+df = pd.read_csv("./attendence lists/student_list.csv")
 
 student_list = list(df["Total Students"])
 
@@ -118,6 +118,25 @@ today_date = date.today()
 
 today_date = today_date.strftime("%Y-%m-%d")
 
-df.to_csv(f"./Attendence lists/{today_date}.csv" , index=False)
+#For not conflicting the file name
+def is_file_exist(file_name):
+    for file in os.listdir("./attendence lists"):
+        if f"{file_name}.csv" == file:
+            return True
+    return False
+
+def unqiue_file_name(today_date):
+    current_date = today_date
+    num = 1
+    while True:
+        if not is_file_exist(today_date):
+            return today_date
+        else:
+            today_date = f"{current_date}({num})"
+            num += 1
+
+today_date = unqiue_file_name(today_date)
+
+df.to_csv(f"./attendence lists/{today_date}.csv" , index=False)
 
 print("attendence file is created")
