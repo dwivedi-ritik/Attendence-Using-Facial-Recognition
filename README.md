@@ -1,3 +1,4 @@
-# Attendence Using Facial Recognition
+### Class Attendence Using Facial Recognition
 
-This is the repositery of my college mini-project.
+#### This application is built on electron js and integrated with python script
+
